@@ -1,0 +1,10 @@
+name: UMD Libraries Staff Directory REST
+description: REST endpoint for processing Staff Directory JSON file from umd-lib/staffdirectory-ldap.
+
+package: UMD Services
+dependencies:
+  - drupal:basic_auth
+  - restui:restui
+type: module
+
+core_version_requirement: ^11

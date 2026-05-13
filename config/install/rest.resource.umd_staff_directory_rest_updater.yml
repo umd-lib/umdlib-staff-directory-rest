@@ -1,0 +1,17 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - basic_auth
+    - serialization
+    - umdlib_staff_directory_rest
+id: umdlib_staff_directory_rest_updater
+plugin_id: umdlib_staff_directory_rest_updater
+granularity: resource
+configuration:
+  methods:
+    - POST
+  formats:
+    - json
+  authentication:
+    - basic_auth

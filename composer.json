@@ -1,0 +1,23 @@
+{
+  "name": "umd-lib/umdlib_staff_directory_rest",
+  "type": "drupal-module",
+  "description": "REST endpoint for syncing staff directory data from LDAP to Drupal. Requires a Person content type.",
+  "license": "Apache-2.0",
+  "authors": [
+    {
+      "name": "UMD Libraries"
+    }
+  ],
+  "keywords": [
+    "drupal",
+    "rest",
+    "staff-directory",
+    "ldap"
+  ],
+  "require": {
+    "php": ">=7.0",
+    "drupal/core": "^11.0",
+    "drupal/basic_auth": "^11.0",
+    "drupal/restui": "^11.0"
+  }
+}

@@ -1,0 +1,23 @@
+<?php
+
+/**
+ * @file
+ * Module file for UMD Staff Directory REST module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function umd_staff_directory_rest_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    case 'help.page.umd_staff_directory_rest':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Adds a REST endpoint for updating the Staff Directory data.') . '</p>';
+      return $output;
+
+    default:
+  }
+}
