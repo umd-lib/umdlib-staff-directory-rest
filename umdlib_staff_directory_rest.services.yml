@@ -1,7 +1,7 @@
 services:
-  logger.channel.umd_staff_directory_rest:
+  logger.channel.umdlib_staff_directory_rest:
     parent: logger.channel_base
-    arguments: ['umd_staff_directory_rest']
-  umd_staff_directory_rest.gateway:
-    class: Drupal\umd_staff_directory_rest\impl\DrupalGateway
-    arguments: ['@entity_type.manager', '@logger.channel.umd_staff_directory_rest']
+    arguments: ['umdlib_staff_directory_rest']
+  umdlib_staff_directory_rest.gateway:
+    class: Drupal\umdlib_staff_directory_rest\impl\DrupalGateway
+    arguments: ['@entity_type.manager', '@logger.channel.umdlib_staff_directory_rest']

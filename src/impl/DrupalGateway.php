@@ -58,14 +58,14 @@ class DrupalGateway implements DrupalGatewayInterface {
    */
   const PERSON_TO_STAFF_DIRECTORY = [
     'field_directory_id' => 'directory_id',
-    'field_library_division' => 'division',
+    'field_division' => 'division',
     'field_library_department' => 'department',
     'field_library_unit' => 'unit',
     'field_first_name' => 'first_name',
     'field_last_name' => 'last_name',
     'field_phone' => 'phone',
     'field_email' => 'email',
-    'field_title' => 'title',
+    'field_professional_title' => 'title',
     'field_location' => 'location',
     'title' => 'display_name',
   ];
@@ -94,7 +94,7 @@ class DrupalGateway implements DrupalGatewayInterface {
    * Initializes the gateway instance by retrieving items from the database.
    */
   private function initialize() {
-    $this->personNodes = self::personsNodes($this->entityTypeManager);
+    $this->personNodes = self::getPersonNodes($this->entityTypeManager);
     $this->directoryIdToNodeIds = $this->getDirectoryIdsToNodeIds($this->personNodes);
     $this->divisionIdsByName = self::getDivisionIdsByName($this->entityTypeManager);
   }
@@ -206,7 +206,7 @@ class DrupalGateway implements DrupalGatewayInterface {
    * @return array
    *   An array of all (published and unpublished) Person nodes.
    */
-  private static function getPersonsNodes(EntityTypeManagerInterface $entityTypeManager) {
+  private static function getPersonNodes(EntityTypeManagerInterface $entityTypeManager) {
     $query = $entityTypeManager->getStorage('node')->getQuery();
     $query->condition('type', 'person');
     $query->accessCheck(FALSE);
