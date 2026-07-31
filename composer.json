@@ -13,11 +13,5 @@
     "rest",
     "staff-directory",
     "ldap"
-  ],
-  "require": {
-    "php": ">=7.0",
-    "drupal/core": "^11.0",
-    "drupal/basic_auth": "^11.0",
-    "drupal/restui": "^11.0"
-  }
+  ]
 }
